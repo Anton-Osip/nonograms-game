@@ -1,0 +1,17 @@
+.timer {
+  position: absolute;
+  top: 18px;
+  right: 25px;
+  font-weight: 700;
+  font-size: 32px;
+}
+.dark .timer {
+  color: #ffffff;
+}
+@media (max-width: 424px) {
+  .timer {
+    top: 21px;
+    right: 18px;
+    font-size: 26px;
+  }
+}

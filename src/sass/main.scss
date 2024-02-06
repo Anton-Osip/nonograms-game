@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "site/variables";
+@import "site/grid";
+@import "site/style";
+
+@import "./site/section/MainPage.scss";
+@import "./site/section/Difficulty.scss";
+@import "./site/section/Nonogram.scss";
+@import "./site/section/TopHelp.scss";
+@import "./site/section/LeftHelp.scss";
+@import "./site/section/Field.scss";
+@import "./site/section/Header.scss";
+@import "./site/section/Timer.scss";
+@import "./site/section/Modal.scss";
+@import "./site/section/SettingsModal.scss";
+@import "./site/section/ModalTopPlayers";
