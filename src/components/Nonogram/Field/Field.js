@@ -71,6 +71,7 @@ export class Field {
       this.playSound('cross', this.sound);
       this.userField[x][y] = 'cross';
     }
+    if (!this.notWin) this.isWinn();
     this.render();
   };
   isField = (event) => {
