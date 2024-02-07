@@ -59,6 +59,7 @@ export class Field {
 
   isCross = (event) => {
     event.preventDefault();
+    if (this.nonogram.isResolved) return;
     if (this.notWin) return;
     this.hendleTimerStart();
     if (!event.target.classList.contains('field__cell')) return;
@@ -75,6 +76,7 @@ export class Field {
     this.render();
   };
   isField = (event) => {
+    if (this.nonogram.isResolved) return;
     if (this.notWin) return;
     this.hendleTimerStart();
     if (!event.target.classList.contains('field__cell')) return;
