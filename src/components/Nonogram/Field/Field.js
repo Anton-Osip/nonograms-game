@@ -13,6 +13,7 @@ export class Field {
   eraserAudio = new Audio('./sound/eraser-sound.mp3');
   fillAudio = new Audio('./sound/fill-sound.mp3');
   winAudio = new Audio('./sound/win.mp3');
+  win = false;
 
   render() {
     document.querySelector('.nonogram__field').innerHTML = '';
@@ -59,6 +60,7 @@ export class Field {
 
   isCross = (event) => {
     event.preventDefault();
+    if (this.win) return;
     if (this.nonogram.isResolved) return;
     if (this.notWin) return;
     this.hendleTimerStart();
@@ -77,6 +79,7 @@ export class Field {
   };
   isField = (event) => {
     if (this.nonogram.isResolved) return;
+    if (this.win) return;
     if (this.notWin) return;
     this.hendleTimerStart();
     if (!event.target.classList.contains('field__cell')) return;
@@ -126,6 +129,7 @@ export class Field {
           item.timer = this.nonogram.timer;
           item.isResolved = true;
           item.userField = this.userField;
+          this.win = true;
 
           let winGame = {
             id: item.id,
